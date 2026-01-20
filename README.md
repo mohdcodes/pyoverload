@@ -1,4 +1,4 @@
-# PyOverload - Function and Method Overloading for Python
+# MethodOverload - Function and Method Overloading for Python
 
 A powerful Python library that brings **function and method overloading** to Python, allowing you to define multiple implementations of the same function with different type signatures. Overloading is resolved at runtime based on the types of arguments passed.
 
@@ -6,19 +6,19 @@ A powerful Python library that brings **function and method overloading** to Pyt
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PyPI](https://img.shields.io/badge/PyPI-methodoverload-informational)](https://pypi.org/project/methodoverload/)
 
-## Why PyOverload?
+## Why MethodOverload?
 
-Python doesn't natively support function overloading like Java or C++. If you define two functions with the same name, the second one overwrites the first. PyOverload solves this problem elegantly:
+Python doesn't natively support function overloading like Java or C++. If you define two functions with the same name, the second one overwrites the first. MethodOverload solves this problem elegantly:
 
 ```python
-# Without PyOverload - This doesn't work!
+# Without MethodOverload - This doesn't work!
 def add(a: int, b: int):
     return a + b
 
 def add(a: str, b: str):  # Overwrites the previous function!
     return f"{a} {b}"
 
-# With PyOverload - This works perfectly!
+# With MethodOverload - This works perfectly!
 from methodoverload import overload
 
 @overload
@@ -55,7 +55,7 @@ Or from source:
 
 ```bash
 git clone https://github.com/mohdcodes/pyoverload.git
-cd pyoverload
+cd methodoverload
 pip install -e .
 ```
 
@@ -149,10 +149,10 @@ print(Math.multiply(3.5, 2.5))  # Output: 8.75
 
 ## How It Works
 
-PyOverload uses **type hints** to determine which implementation to call:
+MethodOverload uses **type hints** to determine which implementation to call:
 
 1. **Registration** - Each `@overload` decorated function is registered with its type signature
-2. **Resolution** - When called, PyOverload examines the argument types
+2. **Resolution** - When called, MethodOverload examines the argument types
 3. **Matching** - Finds the implementation whose type signature matches the arguments
 4. **Execution** - Calls the matching implementation
 5. **Caching** - Results are cached for performance
@@ -346,11 +346,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Citation
 
-If you use PyOverload in your research or project, please cite:
+If you use MethodOverload in your research or project, please cite:
 
 ```bibtex
-@software{pyoverload2024,
-  title={PyOverload: Function and Method Overloading for Python},
+@software{methodoverload2024,
+  title={MethodOverload: Function and Method Overloading for Python},
   author={Siddiqui, Mohd Arbaaz},
   year={2024},
   url={https://github.com/mohdcodes/pyoverload}
