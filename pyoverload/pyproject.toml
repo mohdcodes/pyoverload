@@ -1,0 +1,35 @@
+
+    [build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyoverload"
+version = "0.1.0"
+description = "Runtime function and method overloading for Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Mohd Arbaaz Siddiqui", email = "arbaazcode@gmail.com" }
+]
+
+keywords = ["overloading", "dispatch", "typing", "oop"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pyoverload"
+Repository = "https://github.com/yourusername/pyoverload"
+Issues = "https://github.com/yourusername/pyoverload/issues"
