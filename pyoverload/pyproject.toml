@@ -4,8 +4,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyoverload"
-version = "0.1.0"
+name = "methodoverload"
+version = "0.1.2"
 description = "Runtime function and method overloading for Python"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -30,6 +30,68 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/yourusername/pyoverload"
-Repository = "https://github.com/yourusername/pyoverload"
-Issues = "https://github.com/yourusername/pyoverload/issues"
+Homepage = "https://github.com/mohdcodes/pyoverload"
+Repository = "https://github.com/mohdcodes/pyoverload"
+Documentation = "https://github.com/mohdcodes/pyoverload/blob/main/docs"
+"Bug Tracker" = "https://github.com/mohdcodes/pyoverload/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0", "pytest-cov>=4.0"]
+docs = ["sphinx>=6.0", "sphinx-rtd-theme>=1.0"]
+
+[tool.setuptools]
+packages = ["methodoverload"]
+
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["pyoverload"]
+omit = ["*/tests/*", "*/test_*.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+]
+precision = 2
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_gitignore = true
+known_first_party = ["methodoverload"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

@@ -1,4 +1,4 @@
-from pyoverload.decorators import overload
+from methodoverload.decorators import overload
 
 
 class Calculator:

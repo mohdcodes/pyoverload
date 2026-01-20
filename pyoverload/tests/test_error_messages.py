@@ -5,8 +5,8 @@ Test that correct error messages are raised for invalid or unmatched overload ca
 """
 
 import pytest
-from pyoverload.decorators import overload
-from pyoverload.errors import NoMatchingOverloadError
+from methodoverload.decorators import overload
+from methodoverload.errors import NoMatchingOverloadError
 
 
 def test_no_matching_overload_free_function():

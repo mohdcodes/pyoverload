@@ -1,5 +1,5 @@
 # examples/basic.py
-from pyoverload.decorators import overload
+from methodoverload.decorators import overload
 
 print("===== FREE FUNCTION OVERLOAD =====")
 

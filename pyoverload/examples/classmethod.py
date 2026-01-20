@@ -1,6 +1,6 @@
 # examples/classmethod.py
-from pyoverload.decorators import overload
-from pyoverload.metaclass import OverloadMeta
+from methodoverload.decorators import overload
+from methodoverload.metaclass import OverloadMeta
 
 print("===== CLASS METHOD OVERLOAD =====")
 

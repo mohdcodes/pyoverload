@@ -1,4 +1,4 @@
-from pyoverload.decorators import overload
+from methodoverload.decorators import overload
 def test_basic_cache():
     class Calculator:
         @overload
